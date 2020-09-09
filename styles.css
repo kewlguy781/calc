@@ -1,0 +1,26 @@
+.calc_home
+{   display: grid;
+    grid-template-rows:    repeat(4, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;}
+    
+.math
+{   display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: yellow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;
+}
+    
+.c0 {
+    grid-column: 1/4
+}
+
+.display{
+    background-color: lightblue;
+    height: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
+
