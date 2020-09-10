@@ -1,19 +1,46 @@
 // Calcuator assignment
+let state = {
+    num1: "",
+    num2: "",
+    num: "",
+
+}
+
 
 // Render numbers
 function renderNumber() {
-    return 'Working in progress';
+    let numberString=""
+    let temp =""
+    for (let i=1; i < 10; i++){
+
+    temp = `<div class='c${i}' onclick='numberSelected(${i})'>${i}</div>`
+    console.log('temp :>> ', temp);
+    numberString += temp
+}   
+    numberString += `<div class='c0' onclick='numberSelected(0)'>0</div>`
+    
+    return numberString;
 }
+// Action when number button pressed
+function numberSelected(num){
+    //Store (Append) it into number
+    state.num = state.num + num
+    console.log('state.num :>> ', state.num);
+    renderDisplay()
+}
+
 // Render Functions
 function renderMath(){
     return 'Working in progress';
 };
 // Render Display
 function renderDisplay(){
-    return 'Working in progress';
+    displaystring = state.num
+    console.log('displaystring :>> ', displaystring);
+    document.getElementById("screen").innerHTML =  displaystring
 };
 // Render Total
-function renderDisplay(){
+function renderTotal(){
     return 'Working in progress';
 };
 
@@ -38,7 +65,8 @@ function render() {
     let htmlString = `
     <center><h1> Javascript calculator </h1>
     <div class="display">
-    ${renderDisplay()}
+    <div id="screen"></div>
+    
     </div>
     <div class="calc_home">
     ${renderNumber()}
